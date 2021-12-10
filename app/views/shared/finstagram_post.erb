@@ -8,9 +8,9 @@
   <img src="<%= finstagram_post.photo_url %>" alt="finstagram post from <%= finstagram_post.user.username %>">
   </a>
   <div class="actions">
-    <%= finstagram_post.like_count %> likes
-    <span class="comment-count"><%= finstagram_post.comment_count %> comments</span>
-  </div>
+    <%= erb(:"shared/likes", { locals: { finstagram_post: finstagram_post }}) %>
+  <span class="comment-count"><%= finstagram_post.comment_count %> comments</span>
+</div>
   <ul class="comments">
     <% finstagram_post.comments.each do |comment| %>
       <li>
