@@ -9,8 +9,8 @@
   </a>
   <div class="actions">
     <%= erb(:"shared/likes", { locals: { finstagram_post: finstagram_post }}) %>
-  <span class="comment-count"><%= finstagram_post.comment_count %> comments</span>
-</div>
+    <span class="comment-count"><%= finstagram_post.comment_count %> comments</span>
+  </div>
   <ul class="comments">
     <% finstagram_post.comments.each do |comment| %>
       <li>
